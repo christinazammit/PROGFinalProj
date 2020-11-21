@@ -6,9 +6,13 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    var isOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +22,34 @@ class MainActivity : AppCompatActivity() {
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+        }
+
+        val fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open)
+        val fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close)
+        val fabRClockwise = AnimationUtils.loadAnimation(this, R.anim.rotate_clockwise)
+        val fabRCClockwise = AnimationUtils.loadAnimation(this, R.anim.rotate_counterclockwise)
+
+        fab.setOnClickListener{
+            if (isOpen) {
+                fabHike.startAnimation(fabClose)
+                fabBike.startAnimation(fabClose)
+                fabSwim.startAnimation(fabClose)
+                fab.startAnimation(fabRClockwise)
+
+                isOpen = false
+            }
+            else {
+                fabHike.startAnimation(fabOpen)
+                fabBike.startAnimation(fabOpen)
+                fabSwim.startAnimation(fabOpen)
+                fab.startAnimation(fabRCClockwise)
+
+                fabHike.isClickable
+                fabBike.isClickable
+                fabSwim.isClickable
+
+                isOpen = true
+            }
         }
     }
 
