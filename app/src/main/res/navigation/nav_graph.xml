@@ -25,4 +25,9 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/aboutDialog"
+        android:name="sheridan.zammichr.progfinalproj.dialogs.AboutDialog"
+        android:label="AboutDialog" />
+    <action android:id="@+id/action_global_to_about" app:destination="@id/aboutDialog" />
 </navigation>
