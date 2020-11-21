@@ -23,11 +23,54 @@
     <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSwim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="180dp"
+        app:fabSize="mini"
+        app:srcCompat="@mipmap/ic_swim_foreground"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="130dp"
+        app:fabSize="mini"
+        app:srcCompat="@mipmap/ic_bike_foreground"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="80dp"
+        app:fabSize="mini"
+        app:srcCompat="@mipmap/ic_hike_foreground"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:fabSize="normal"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
